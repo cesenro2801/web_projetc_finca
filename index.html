@@ -392,34 +392,85 @@
     .banner-title span { color: var(--earth); }
 
     /* ── CONTACT ──────────────────────────────────── */
+
     #contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: start;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem 3rem 1.5rem;
+      min-height: 340px;
     }
-    .contact-info .section-title { margin-bottom: 1.5rem; }
-    .contact-body { font-size: .88rem; color: var(--fog); line-height: 1.8; margin-bottom: 2rem; }
-    .contact-detail {
-      display: flex; gap: 1rem; align-items: flex-start;
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 2vw;
+      padding-right: 2vw;
+    }
+    .contact-info .section-title {
+      margin-bottom: .7rem;
+      font-size: 2.6rem;
+      letter-spacing: .04em;
+    }
+    .contact-body {
+      font-size: .82rem;
+      color: var(--fog);
+      line-height: 1.6;
       margin-bottom: 1.2rem;
     }
-    .c-icon { color: var(--earth); font-size: 1rem; margin-top: .15rem; flex-shrink: 0; }
-    .c-label { font-size: .6rem; letter-spacing: .2em; text-transform: uppercase; color: var(--earth); margin-bottom: .2rem; }
-    .c-value { font-size: .85rem; color: var(--offwhite); }
-
-    /* WA button */
-    .wa-btn {
-      display: inline-flex; align-items: center; gap: .8rem;
-      background: var(--wa); color: #fff;
-      font-family: var(--f-body);
-      font-size: .78rem; letter-spacing: .12em;
-      text-transform: uppercase; text-decoration: none;
-      padding: 1rem 2rem;
-      transition: opacity .3s, transform .2s;
-      margin-top: .5rem;
+    .contact-detail {
+      display: flex;
+      gap: .6rem;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: .7rem;
     }
-    .wa-btn:hover { opacity: .85; transform: translateY(-2px); }
-    .wa-icon { font-size: 1.3rem; }
+    .c-icon {
+      color: var(--earth);
+      font-size: .9rem;
+      margin-top: 0;
+      flex-shrink: 0;
+    }
+    .c-label {
+      font-size: .54rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--earth);
+      margin-bottom: 0;
+    }
+    .c-value {
+      font-size: .8rem;
+      color: var(--offwhite);
+    }
+    .wa-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: var(--wa);
+      color: #fff;
+      font-family: var(--f-body);
+      font-size: .74rem;
+      letter-spacing: .10em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: .7rem 1.5rem;
+      border-radius: 2.2rem;
+      transition: opacity .3s, transform .2s;
+      margin-top: .7rem;
+      box-shadow: 0 2px 12px 0 rgba(37,211,102,0.07);
+    }
+    .wa-btn:hover {
+      opacity: .85;
+      transform: translateY(-2px) scale(1.04);
+    }
+    .wa-icon {
+      font-size: 1.1rem;
+    }
 
     /* Form */
     .contact-form { display: flex; flex-direction: column; gap: 1rem; }
@@ -569,7 +620,7 @@
 
 <!-- ════════════════ NAV ════════════════ -->
 <nav>
-  <a href="#" class="nav-logo">NOMBRE DEL HOSTAL</a>
+  <a href="#" class="nav-logo">RANCHO SAN JOSE CHARTA</a>
   <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
     <span class="nav-toggle-bar"></span>
     <span class="nav-toggle-bar"></span>
@@ -591,9 +642,9 @@
   </div>
 
   <div class="hero-content">
-    <p class="hero-eyebrow">Municipio, Departamento · Colombia</p>
+    <p class="hero-eyebrow">Charta, Santander · Colombia</p>
     <h1 class="hero-title">
-      NOMBRE<br>DEL<br><span>HOSTAL</span>
+      RANCHO SAN JOSE CHARTA
     </h1>
     <p class="hero-sub">
       Refugio en el corazón del páramo. Un lugar donde el silencio de la niebla,
@@ -847,23 +898,19 @@
       <div class="c-icon">📍</div>
       <div>
         <div class="c-label">Ubicación</div>
-        <div class="c-value">Vereda [NOMBRE], Municipio [NOMBRE], [Departamento] · Colombia</div>
+        <div class="c-value">Vereda RINCONADA, Municipio CHARTA, SANTANDER · Colombia</div>
       </div>
     </div>
     <div class="contact-detail reveal reveal-delay-2">
       <div class="c-icon">📞</div>
       <div>
         <div class="c-label">Teléfono / WhatsApp</div>
-        <div class="c-value">+57 300 000 0000</div>
+        <div class="c-value">
+          <a href="https://wa.me/573112104080?text=Hola%2C%20estoy%20interesado%20en%20reservar%20en%20el%20hostal.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">311 210 4080</a>
+        </div>
       </div>
     </div>
-    <div class="contact-detail reveal reveal-delay-3">
-      <div class="c-icon">📧</div>
-      <div>
-        <div class="c-label">Email</div>
-        <div class="c-value">info@nombredelhostal.com</div>
-      </div>
-    </div>
+    <!-- Eliminado email -->
     <div class="contact-detail reveal reveal-delay-3">
       <div class="c-icon">🕐</div>
       <div>
@@ -875,7 +922,7 @@
     <!-- ── WhatsApp CTA ── -->
     <!-- Cambia el número (sin +) y el mensaje predefinido -->
     <a
-      href="https://wa.me/573652523424?text=Hola%2C%20estoy%20interesado%20en%20reservar%20en%20el%20hostal.%20%C2%BFTienen%20disponibilidad%3F"
+      href="https://wa.me/573112104080?text=Hola%2C%20estoy%20interesado%20en%20reservar%20en%20el%20hostal.%20%C2%BFTienen%20disponibilidad%3F"
       target="_blank"
       rel="noopener"
       class="wa-btn reveal reveal-delay-3"
@@ -885,43 +932,15 @@
     </a>
   </div>
 
-  <!-- Formulario de contacto -->
-  <form class="contact-form reveal reveal-delay-1" onsubmit="handleForm(event)">
-    <p class="section-label" style="margin-bottom:1rem">Formulario de contacto</p>
-
-    <div class="form-group">
-      <label class="form-label">Nombre completo</label>
-      <input type="text" class="form-input" placeholder="Tu nombre" required />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Correo electrónico</label>
-      <input type="email" class="form-input" placeholder="correo@ejemplo.com" required />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Número de personas</label>
-      <input type="number" class="form-input" placeholder="ej. 2" min="1" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Fechas de visita</label>
-      <input type="text" class="form-input" placeholder="ej. 10 al 12 de agosto" />
-    </div>
-    <div class="form-group">
-      <label class="form-label">Mensaje</label>
-      <textarea class="form-textarea" placeholder="¿Qué actividades te interesan? ¿Alguna consulta especial?"></textarea>
-    </div>
-    <button type="submit" class="form-submit">Enviar consulta →</button>
-    <p id="form-msg" style="font-size:.78rem;color:var(--earth);margin-top:.5rem;display:none;">
-      ¡Mensaje enviado! Te contactaremos pronto.
-    </p>
-  </form>
+  <!-- Formulario eliminado, solo WhatsApp como contacto -->
 </section>
 
 <!-- ════════════════ FOOTER ════════════════ -->
 <footer>
-  <div class="footer-logo">NOMBRE DEL HOSTAL</div>
+  <div class="footer-logo">RANCHO SAN JOSE CHARTA</div>
   <div class="footer-copy">© 2025 Hostal [Nombre] · Todos los derechos reservados</div>
   <div class="footer-links">
-    <a href="#">Instagram</a>
+    <a href="https://www.instagram.com/ranchosanjosecharta/" target="_blank" rel="noopener">Instagram</a>
     <a href="#">Facebook</a>
     <a href="#">TripAdvisor</a>
   </div>
